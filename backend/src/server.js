@@ -1,7 +1,7 @@
 import express from "express";
 import http from "http";
 import { Server } from "socket.io";
-import mqttClient from "./mqtt.js";
+import mqttClient from "./mqttClient.js";
 
 const app = express();
 const server = http.createServer(app);
