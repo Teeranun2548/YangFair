@@ -9,6 +9,10 @@ const server = http.createServer(app)
 
 initSocket(server)
 
+app.get("/", (req, res) => {
+  res.send("People Counter Backend is running 🚀");
+});
+
 app.get("/status", (req, res) => {
   res.json({ status: "People Counter Running" })
 })
