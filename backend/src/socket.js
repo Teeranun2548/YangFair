@@ -15,3 +15,8 @@ export function sendUpdate(count) {
 export function sendEvent(message) {
   if (io) io.emit("event", message)
 }
+
+socket.on("reset_counter", () => {
+  count = 0;
+  io.emit("count_update", { count, milestone: false });
+});
